@@ -1,0 +1,47 @@
+.menu-right {
+  gap: 1rem;
+  margin-left: auto;
+}
+
+.icon-group {
+  font-size: 1.3rem;
+}
+
+.icon-group div {
+  width: 2.6rem;
+  line-height: 3rem;
+  text-align: center;
+}
+
+.bag-container {
+  position: relative;
+}
+
+.wishlist-container {
+  position: relative;
+}
+
+.icon-group .item-count {
+  width: 22px;
+  height: 22px;
+  font-size: 12px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background-color: #2B7FB6;
+  color: white;
+  border-radius: 50%;
+  opacity: 0.9;
+}
+
+@media screen and (min-width: 1280px) {
+  .menu-right {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .icon-group div {
+    width: 2rem;
+  }
+}

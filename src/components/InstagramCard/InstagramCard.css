@@ -1,0 +1,38 @@
+.instagram-card {
+    flex: 1 1 auto;
+    min-width: calc((1/2.5 * 100%));
+}
+
+.instagram-card .instagram-card-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.product-thumbnail {
+    background-color: #eceff1;
+    padding-bottom: 5px;
+}
+
+.instagram-card .thumbnail {
+    position: relative;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    height: 50px;
+    width: 50px;
+    border: 1px solid #767677;
+}
+
+.view-products .btn {
+    font-size: 14px;
+    text-decoration: underline;
+    letter-spacing: 1px;
+    padding: 3px 5px;
+    transition: background-color 0.3s var(--transition-bezier), text-decoration 0.2s var(--transition-bezier);
+}
+
+.view-products .btn:hover {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+}

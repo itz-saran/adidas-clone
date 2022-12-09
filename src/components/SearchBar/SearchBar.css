@@ -1,0 +1,38 @@
+.search-wrapper {
+  position: relative;
+  height: 2rem;
+  width: 13vw;
+  min-width: 140px;
+  max-width: 300px;
+}
+
+.search-bar input {
+  outline: none;
+  padding: 0 35px 0 10px;
+  height: 2rem;
+  width: 100%;
+  border: 1px solid #eceff1;
+  background: #eceff1;
+}
+
+.search-bar input::placeholder {
+  color: black;
+}
+
+.search-bar input:hover {
+  transition: border ease 1s;
+  border: 1px solid #767677;
+}
+
+.search-bar .btn-search {
+  position: absolute;
+  right: 8px;
+  bottom: 2px;
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 960px) {
+  .search-wrapper {
+    display: none;
+  }
+}

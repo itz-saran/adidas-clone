@@ -1,0 +1,128 @@
+{
+  "featured": {
+    "title": "FEATURED",
+    "to": "/men",
+    "links": [
+      { "title": "New Arrivals", "to": "/men-new_arrivals" },
+      { "title": "Manchester United", "to": "/men-machester_united" },
+      { "title": "Real Madrid", "to": "/real_madrid" },
+      { "title": "Originals", "to": "/men-orginals" },
+      { "title": "Arsenal", "to": "/arsenal" },
+      { "title": "Ultraboost", "to": "/men-ultraboost" },
+      { "title": "Walking", "to": "/men-walking" },
+      { "title": "Stan Smith", "to": "/men-stan_smith" },
+      { "title": "Rohit Sharma", "to": "/rohit_sharma_collection" },
+      { "title": "FIFA WORLD CUP 2022 KITS", "to": "/federations-football" },
+      { "title": "Members week", "to": "/membersweek" },
+      { "title": "", "to": "" },
+      { "title": "Outlet", "to": "/men-outlet", "className": "red" }
+    ],
+    "bottomLink": {
+      "title": "All men's",
+      "to": "/men?grid=true"
+    }
+  },
+  "footwear": {
+    "title": "FOOTWEAR",
+    "to": "/men-shoes",
+    "links": [
+      { "title": "Running", "to": "/men-running-shoes" },
+      { "title": "Running show finder", "to": "/running_shoe_finder" },
+      { "title": "Sneakers", "to": "/sneakers-men" },
+      { "title": "Originals", "to": "/men-original-shoes" },
+      { "title": "Slides & Sandals", "to": "/men-slides_flip_flops" },
+      { "title": "Football", "to": "/men-football-shoes" },
+      { "title": "Basketball", "to": "/men-basketball-shoes" },
+      { "title": "Tennis", "to": "/men-tennis-shoes" },
+      { "title": "Skateboarding", "to": "/men-skateboarding-shoes" },
+      { "title": "Swim", "to": "/men-swin-shoes" },
+      { "title": "Hiking & Outdoor", "to": "/men-outdoor-shoes" },
+      { "title": "Cricket", "to": "/men-cricket-shoes" },
+      { "title": "Walking", "to": "/men-walking" }
+    ],
+    "bottomLink": {
+      "title": "All men's footwear",
+      "to": "/men?grid=true"
+    }
+  },
+  "clothing": {
+    "title": "CLOTHING",
+    "to": "/men-clothing",
+    "links": [
+      { "title": "T-Shirts & Tank Tops", "to": "/men-t_shirts" },
+      { "title": "Joggers & Track pants", "to": "/men-pants" },
+      { "title": "Originals", "to": "/men-originals-clothing" },
+      {
+        "title": "Football Jerseys & T- Shirts",
+        "to": "/men-football-jerseys"
+      },
+      { "title": "Shorts", "to": "/men-shorts" },
+      { "title": "Jackets", "to": "/men-jackets" },
+      { "title": "Hoodies", "to": "/men-hoodies" },
+      { "title": "Tracksuits", "to": "/men-tracksuits" },
+      { "title": "Sweatshirts", "to": "/men-sweatshirts" },
+      { "title": "Swimwear", "to": "/men-swim-clothing" }
+    ],
+    "bottomLink": {
+      "title": "All men's Clothing",
+      "to": "/men-clothing"
+    }
+  },
+  "accessories": {
+    "title": "ACCESSORIES",
+    "to": "men-accessories",
+    "links": [
+      { "title": "Face Covers", "to": "/men-face_cover" },
+      { "title": "Socks", "to": "/men-socks" },
+      { "title": "All Bags", "to": "/men-bags" },
+      { "title": "Backpacks", "to": "/men-backpacks" },
+      { "title": "Gym & Training Bags", "to": "/men-training-bags" },
+      { "title": "Headwear", "to": "/men-headwear" },
+      { "title": "Gloves", "to": "/men-gloves" },
+      { "title": "Balls", "to": "/men-balls" }
+    ],
+    "bottomLink": {
+      "title": "All men's Accessories",
+      "to": "/men-accessories"
+    }
+  },
+  "sports": {
+    "title": "SPORTS",
+    "to": "/men-performance",
+    "links": [
+      { "title": "Running", "to": "/men-running" },
+      { "title": "Gym & Training", "to": "/men-training" },
+      { "title": "Football", "to": "/men-football" },
+      { "title": "Tennis", "to": "/men-tennis" },
+      { "title": "Basketball", "to": "/men-basketball" },
+      { "title": "Hiking & Outdoor", "to": "/outdoor-men" },
+      { "title": "Swim", "to": "/men-swim" },
+      { "title": "Skateboarding", "to": "/men-skateboarding" },
+      { "title": "Golf", "to": "/men-golf?grid=true" },
+      { "title": "Yoga", "to": "/men-yoga" },
+      { "title": "Walking", "to": "/men-walking" }
+    ],
+    "bottomLink": {
+      "title": "Men's all Sustainable",
+      "to": "/men-all_sustainable"
+    },
+    "sustainable": {
+      "title": "SUSTAINABLE MATERIALS",
+      "to": "/men-all_sustainable",
+      "links": [
+        {
+          "title": "Made with Recycled Material",
+          "to": "/men-made_with_recycled_material"
+        },
+        {
+          "title": "Vegan",
+          "to": "/men-vegan"
+        },
+        {
+          "title": "Organic cotton",
+          "to": "/men-organic_cotton"
+        }
+      ]
+    }
+  }
+}

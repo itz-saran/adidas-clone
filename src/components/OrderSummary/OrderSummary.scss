@@ -1,0 +1,28 @@
+@use "../../assets/sass/partials/variables" as *;
+
+.summary-container {
+  padding-top: 77px;
+  font-size: 14px;
+}
+
+.order {
+  &__summary-panel {
+    border: 1px solid #eceff1;
+    padding: 24px 15px;
+  }
+
+  &-summary {
+    &__title {
+      margin-bottom: $spacing-15;
+      font-size: 1rem;
+    }
+
+    &__item {
+      margin-bottom: $spacing-15;
+    }
+
+    &__total {
+      font-size: 1rem;
+    }
+  }
+}

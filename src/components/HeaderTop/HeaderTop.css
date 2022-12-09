@@ -1,0 +1,40 @@
+.header-top {
+  background-color: black;
+  color: white;
+  font-size: 11px;
+  height: 100%;
+  letter-spacing: 2px;
+}
+
+.header-top svg {
+  margin-right: 2px;
+}
+
+.header-top-wrapper {
+  margin: 0 auto;
+  width: 90vw;
+  justify-content: space-around;
+  height: 30px;
+}
+
+.header-top a {
+  color: white;
+}
+
+@media screen and (max-width: 960px) {
+  .header-top {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .header-top-wrapper {
+    max-height: 40px;
+    flex-direction: column;
+  }
+
+  .header-top-wrapper div {
+    display: flex;
+    align-items: center;
+    min-height: 100%;
+  }
+}

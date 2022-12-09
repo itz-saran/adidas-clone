@@ -1,0 +1,19 @@
+.star-wrapper {
+    position: relative;
+}
+
+.rating-star-mask {
+    overflow: hidden;
+    position: absolute;
+    z-index: 15;
+}
+
+.rating-star {
+    height: 1em;
+    width: 1em;
+    color: black;
+}
+
+.stars {
+    font-size: 20px;
+}

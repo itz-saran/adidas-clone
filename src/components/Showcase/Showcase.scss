@@ -1,0 +1,125 @@
+@use "../../assets/sass/partials/breakpoints" as *;
+
+.showcase {
+  --ig-sidebar-width: 0px;
+  --ig-columns: 1;
+  --ig-visible-rows: 3;
+  --ig-last-item-span: 0;
+  --ig-max-rows: 10;
+  --ig-scrollbar-width: 15px;
+  --regular-viewer-dynamic-height: calc(100vh - 300px);
+  --regular-viewer-min-height: 600px;
+  --regular-viewer-height: max(
+    var(--regular-viewer-dynamic-height),
+    var(--regular-viewer-min-height)
+  );
+  --regular-viewer-height-compensated: var(--regular-viewer-height) + 2px;
+  --ig-total-width: 100vw - var(--ig-sidebar-width) - var(--ig-scrollbar-width);
+  --ig-item-height: (var(--ig-total-width)) / var(--ig-columns);
+}
+
+.showcase {
+  .breadcrumb {
+    justify-content: flex-start;
+  }
+
+  .product-description-mobile {
+    padding: 10px 20px;
+    background-color: white;
+
+    [class*="flex-"] {
+      flex-wrap: wrap;
+    }
+  }
+
+  .review-stars {
+    font-size: 11px;
+  }
+
+  .review-count {
+    text-decoration: underline;
+    margin-left: 5px;
+  }
+
+  &__product-title {
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-size: 24px;
+  }
+}
+
+.collage {
+  &.grid {
+    grid-template-columns: repeat(var(--ig-columns), 1fr);
+    gap: 1px;
+  }
+}
+
+.showcase .collage-wrapper[aria-expanded="true"] {
+  --ig-visible-rows: var(--ig-max-rows) !important;
+}
+
+.showcase .product-image:first-child {
+  grid-column: span var(--ig-columns);
+  .view-container {
+    height: var(--regular-viewer-height);
+    padding: 0;
+  }
+}
+
+.expand-btn {
+  position: relative;
+  height: 50px;
+}
+
+.expand-btn svg {
+  margin-left: 15px;
+}
+
+.expand-btn button {
+  background-color: white;
+  position: absolute;
+  transform: translateY(-50%);
+  cursor: pointer;
+  border: 1px solid black;
+  height: 100%;
+  padding: 0 15px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: color 0.3s var(--transition-bezier);
+}
+
+.expand-btn button:hover {
+  color: #767677;
+}
+
+.showcase .accordion-container {
+  padding: 0 20px;
+  margin-bottom: 5rem;
+}
+
+@include s {
+  .showcase {
+    width: calc(100% - var(--ig-sidebar-width));
+  }
+}
+
+@include l {
+  .showcase {
+    --ig-columns: 2;
+    --ig-max-rows: 5;
+    --ig-sidebar-width: 320px;
+  }
+
+  .showcase {
+    .accordion-container {
+      margin-bottom: 74px;
+    }
+  }
+}
+
+@include xl {
+  .showcase {
+    --ig-sidebar-width: 430px;
+  }
+}

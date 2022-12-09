@@ -1,0 +1,27 @@
+.filter {
+    border-bottom: 1px solid #d3d7da;
+    padding: 15px 0;
+}
+
+.filter:first-child {
+    padding-top: 0;
+}
+
+.filter:last-child {
+    border-bottom: none;
+}
+
+.filter__title {
+    margin: 5px 0;
+}
+
+.filter-card {
+    border: 1px solid #d3d7da;
+    gap: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.filter-card--hover:hover {
+    border: 1px solid #767677;
+}

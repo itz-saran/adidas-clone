@@ -1,0 +1,19 @@
+.new-arrivals {
+  margin-top: 5rem;
+}
+
+.title-wrapper {
+  justify-content: space-between;
+}
+
+.title-wrapper a {
+  text-decoration: underline;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+@media screen and (max-width: 300px) {
+  .new-arrivals {
+    margin-top: 2rem;
+  }
+}

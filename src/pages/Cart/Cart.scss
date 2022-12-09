@@ -1,0 +1,30 @@
+.checkout {
+  border-top: 1px solid #eceff1;
+
+  .cart-title {
+    margin: 15px 0;
+  }
+
+  &__container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 15px 30px;
+  }
+
+  .title-xl {
+    font-size: 36px;
+  }
+}
+
+.top-picks {
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__recommended {
+    .product-card {
+      width: 16vw;
+    }
+  }
+}

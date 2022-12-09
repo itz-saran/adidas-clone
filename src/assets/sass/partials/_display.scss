@@ -1,0 +1,81 @@
+@use "./breakpoints" as *;
+
+.visible-s {
+  display: none;
+}
+
+.visible-m {
+  display: none;
+}
+
+.visible-l {
+  display: none;
+}
+
+.visible-xl {
+  display: none;
+}
+
+.visible-hg {
+  display: none;
+}
+
+@include s {
+  .visible-s {
+    display: block !important;
+  }
+}
+
+@include m {
+  .visible-m {
+    display: block !important;
+  }
+}
+
+@include l {
+  .visible-l {
+    display: block !important;
+  }
+}
+
+@include xl {
+  .visible-xl {
+    display: block !important;
+  }
+}
+
+@include hg {
+  .visible-hg {
+    display: block !important;
+  }
+}
+
+@include s {
+  .hidden-s {
+    display: none !important;
+  }
+}
+
+@include m {
+  .hidden-m {
+    display: none !important;
+  }
+}
+
+@include l {
+  .hidden-l {
+    display: none !important;
+  }
+}
+
+@include xl {
+  .hidden-xl {
+    display: none !important;
+  }
+}
+
+@include hg {
+  .hidden-hg {
+    display: none !important;
+  }
+}

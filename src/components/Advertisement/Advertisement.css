@@ -1,0 +1,85 @@
+.ad {
+  position: relative;
+  overflow: hidden;
+}
+
+.ad-content-wrapper {
+  justify-content: flex-start;
+  color: black;
+  margin: 0 auto;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.ad-content {
+  gap: 1rem;
+  padding: 40px 15px;
+  height: 100%;
+  justify-content: center;
+}
+
+.ad-content-wrapper i {
+  color: black;
+}
+
+.ad-content-wrapper .btn-outline-white {
+  width: 8rem;
+}
+
+.ad .btn-group {
+  gap: 1rem;
+}
+
+.white {
+  color: white;
+}
+
+@media screen and (max-width: 200px) {
+  .ad .btn-group {
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .ad-content {
+    gap: 1rem;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-end;
+  }
+
+  .ad-title {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 960px) {
+  .ad-content {
+    width: 41.66666%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .ad-content-wrapper {
+    max-width: 1280px;
+  }
+
+  .ad-content {
+    width: 33.333%;
+  }
+}
+
+@media (min-width: 1600px) {
+  .ad-content-wrapper {
+    max-width: 1600px;
+  }
+
+  .ad-content {
+    width: 50%;
+  }
+}

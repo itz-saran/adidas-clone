@@ -1,0 +1,20 @@
+@use "../../assets/sass/partials/breakpoints" as *;
+
+.recommended {
+  margin-bottom: 5rem;
+  margin: 0 10px;
+}
+
+.recommended .title {
+  margin-bottom: 15px;
+}
+
+.recommended .product-card {
+  width: 30vw;
+}
+
+@include m {
+  .recommended {
+    padding: 0 20px;
+  }
+}

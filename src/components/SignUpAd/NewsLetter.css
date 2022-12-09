@@ -1,0 +1,40 @@
+.newsletter {
+  overflow: hidden;
+  background-color: #ede734;
+  height: 100%;
+}
+
+.newsletter-wrapper {
+  gap: 1rem;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.newsletter-wrapper.flex-center {
+  justify-content: flex-start;
+}
+
+.newsletter .title {
+  max-width: 425px;
+  width: 100%;
+  font-size: 30px;
+}
+
+.newsletter-wrapper .btn-outline-black {
+  align-self: flex-start;
+  width: 8.5rem;
+}
+
+@media screen and (max-width: 968px) {
+  .newsletter .title {
+    max-width: 100%;
+  }
+
+  .newsletter-wrapper {
+    padding: 20px 0;
+    width: 86%;
+    flex-direction: column;
+  }
+}

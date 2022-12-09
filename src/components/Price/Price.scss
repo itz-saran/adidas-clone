@@ -1,0 +1,14 @@
+.price-detail {
+  transition: transform 0.2s ease-in-out;
+}
+
+.price {
+  font-size: 1rem;
+  padding: 3px 4px 0;
+  background-color: white;
+}
+
+.strike {
+  text-decoration: line-through;
+  color: #767677;
+}

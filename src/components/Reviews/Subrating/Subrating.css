@@ -1,0 +1,11 @@
+.subratings {
+    margin-top: 15px;
+}
+
+.subratings .flex-column {
+    align-items: center;
+}
+
+.rating-label {
+    margin-top: 5px;
+}

@@ -1,0 +1,35 @@
+@use "../../assets/sass/partials/breakpoints" as *;
+
+.cart-item {
+  &__container {
+    border: 1px solid black;
+  }
+  @include l {
+    #{&}__thumbnail {
+      width: 240px;
+    }
+  }
+
+  &__details {
+    align-self: flex-start;
+    padding: 20px 0;
+    width: 100%;
+  }
+
+  &__header {
+    text-transform: uppercase;
+  }
+
+  &__stock {
+    text-transform: none;
+  }
+
+  &__actions {
+    .btn-remove-item {
+      cursor: pointer;
+      &:hover {
+        color: #767677;
+      }
+    }
+  }
+}

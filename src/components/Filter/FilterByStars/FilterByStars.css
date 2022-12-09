@@ -1,0 +1,12 @@
+.filter-by-stars .filter-card {
+    border-right: none;
+}
+
+.filter-by-stars .filter-card:last-child {
+    border-right: 1px solid #d3d7da;
+}
+
+.filter-card--active {
+    color: white;
+    background-color: black;
+}

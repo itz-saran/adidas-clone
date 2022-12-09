@@ -1,0 +1,37 @@
+$break-points: (
+  "s": 0,
+  "m": 600px,
+  "l": 960px,
+  "xl": 1280px,
+  "hg": 1600px,
+);
+
+@mixin s {
+  @media screen and (min-width: map-get($break-points, "s")) {
+    @content;
+  }
+}
+
+@mixin m {
+  @media screen and (min-width: map-get($break-points, "m")) {
+    @content;
+  }
+}
+
+@mixin l {
+  @media screen and (min-width: map-get($break-points, "l")) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media screen and (min-width: map-get($break-points, "xl")) {
+    @content;
+  }
+}
+
+@mixin hg {
+  @media screen and (min-width: map-get($break-points, "hg")) {
+    @content;
+  }
+}

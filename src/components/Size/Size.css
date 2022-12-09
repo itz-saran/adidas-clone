@@ -1,0 +1,37 @@
+.size {
+  background-color: transparent;
+  color: black;
+  cursor: pointer;
+  height: 40px;
+  border: 1px solid #eceff1;
+}
+
+.size.selected {
+  background-color: black;
+  color: white;
+}
+
+.size-selector {
+  margin-top: 40px;
+}
+
+.sizes {
+  margin-top: 10px;
+}
+
+.sizes.grid {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.size:hover {
+  background-color: black;
+  color: white;
+}
+
+.alert {
+  margin-top: 10px;
+}
+
+.sizes+.alert {
+  font-size: 14px;
+}

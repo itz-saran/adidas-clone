@@ -1,0 +1,14 @@
+.main-menu h2 {
+  font-size: 14px;
+}
+
+.main-menu {
+  gap: 20px;
+  letter-spacing: 2px;
+}
+
+@media screen and (max-width: 960px) {
+  .header-menu-wrapper .main-menu {
+    display: none;
+  }
+}

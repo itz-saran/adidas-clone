@@ -1,0 +1,44 @@
+.form-item {
+  position: relative;
+}
+
+.coupon-input {
+  &-field {
+    border: 1px solid #767677;
+    outline: none;
+    padding: 15px;
+    width: 100%;
+    font-size: 1rem;
+
+    &:focus {
+      border: 1px solid black;
+    }
+  }
+
+  &-field:focus ~ &-label {
+    font-size: 12px;
+    top: 0;
+  }
+
+  &-field:focus ~ .add-icon {
+    display: none;
+  }
+
+  &-label {
+    padding: 0 2px;
+    color: #767677;
+    font-size: 1rem;
+    cursor: text;
+    background-color: white;
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    translate: 0 -50%;
+    transition: all 0.3s var(--transition-bezier);
+  }
+}
+
+.add-icon {
+  position: absolute;
+  right: 0;
+}

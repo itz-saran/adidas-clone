@@ -1,0 +1,205 @@
+@use "../sass/main.scss" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "AdihausDIN Bold";
+  src: url("../fonts/AdihausDIN-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "AdihausDIN Medium Italic";
+  src: url("../fonts/AdihausDIN-CnMediumItalic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "AdihausDIN Regular";
+  src: url("../fonts/AdihausDIN-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Adineue Pro Bold";
+  src: url("../fonts/adineuePRO-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Adinue Pro Regular";
+  src: url("../fonts/adineuePRO-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "YeezyTStar";
+  src: url("../fonts/yeezy_tstar-regular-webfont.woff2") format("woff2");
+}
+
+:root {
+  --font-regular: "AdihausDIN Regular";
+  --font-italic: "AdihausDIN Medium Italic";
+  --font-bold: "AdihausDIN Bold";
+  --font-pro-bold: "Adineue Pro Bold";
+  --font-pro-regular: "Adineue Pro Regular";
+  --font-yeezy: "YeezyTStar";
+  --transition-bezier: cubic-bezier(0.3, 0, 0, 1);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul li {
+  list-style: none;
+}
+
+.red {
+  color: #e32b2b;
+}
+
+.f-regular {
+  font-family: var(--font-regular);
+}
+
+.f-light {
+  font-family: var(--font-regular);
+  font-weight: 300;
+}
+
+.f-bold {
+  font-family: var(--font-bold);
+}
+
+.f-italic {
+  font-family: var(--font-italic);
+}
+
+.f-regular-pro {
+  font-family: var(--font-pro-regular);
+}
+
+.f-bold-pro {
+  font-family: var(--font-pro-bold);
+}
+
+.f-yeezy {
+  font-family: var(--font-yeezy);
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flex-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-grow-100 {
+  flex-grow: 1;
+}
+
+.flex-grow-50 {
+  flex-grow: 0.5;
+}
+
+.flex-grow-25 {
+  flex-grow: 0.25;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.mobile-only {
+  display: none;
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.btn-flex-group {
+  gap: 1rem;
+}
+
+.title-xl {
+  font-size: 40px;
+}
+
+.title-lg {
+  font-size: 32px;
+}
+
+.title-md {
+  font-size: 18px;
+}
+
+.icon {
+  height: 50px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+  font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 960px) {
+  .header-top {
+    max-height: 40px;
+    flex-direction: column;
+  }
+}

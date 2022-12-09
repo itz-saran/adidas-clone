@@ -1,0 +1,9 @@
+.news-section {
+  margin-top: 5rem;
+}
+
+@media screen and (max-width: 960px) {
+  .news-section {
+    margin-top: 2rem;
+  }
+}
