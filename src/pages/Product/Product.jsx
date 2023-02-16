@@ -17,6 +17,7 @@ const Product = (props) => {
   const headerRef = useRef();
   const showcaseRef = useRef();
   const dispatch = useDispatch();
+
   useEffect(() => {
     dispatch(getProduct(params.SKU));
   }, [dispatch, params.SKU]);

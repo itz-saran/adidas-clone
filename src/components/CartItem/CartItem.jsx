@@ -19,7 +19,8 @@ const CartItem = ({ cartItem, inWishlist }) => {
     color,
     sizes,
   } = product;
-  const stock = sizes.find((sizeObj) => sizeObj.size === size).stock;
+  const stock = 5;
+  // sizes.find((sizeObj) => sizeObj.size === size).stock
   return (
     <div className="cart-item cart-item__container vspace-m flex">
       <img

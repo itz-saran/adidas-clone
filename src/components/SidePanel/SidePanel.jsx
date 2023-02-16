@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { BiRuler, BiBox } from "react-icons/bi";
-import { FaRegHeart } from "react-icons/fa";
+import { FaRegHeart, FaHeart } from "react-icons/fa";
 import { GrAlert } from "react-icons/gr";
 
 import { throttle } from "../../assets/helpers/helper";
@@ -12,15 +12,21 @@ import "./SidePanel.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../../redux/cartSlice";
 import Price from "../Price/Price";
+import Callout from "../Callout/Callout";
+import { removeFromWishlist } from "../../redux/wishlistSlice";
 
 export const SidePanel = ({ headerRef, showcaseRef }) => {
   const productData = useSelector((state) => state.product);
   const dispatch = useDispatch();
+  let { wishlist } = useSelector((state) => state.wishlist);
+  wishlist = wishlist.map((item) => item.SKU);
   const { category, review } = productData.product;
   const { price, discount } = productData.currentShowcase;
   const panelRef = useRef();
   const marginRef = useRef();
-  const setScrollStick = useCallback(() => {
+  const freeShipRef = useRef();
+
+  const getMarginLimit = useCallback(() => {
     const panelRemainingHeight =
       panelRef.current?.offsetHeight - window.innerHeight;
     const marginMax =
@@ -32,17 +38,29 @@ export const SidePanel = ({ headerRef, showcaseRef }) => {
       window.scrollY - (panelRemainingHeight + headerRef.current?.offsetHeight);
     const marginLimit =
       marginTop > 0 ? (marginTop <= marginMax ? marginTop : marginMax) : 0;
-
-    panelRef.current.style.cssText = `top: -${panelRemainingHeight}px`;
-    marginRef.current.style.marginTop = `${marginLimit}px`;
+    return { panelRemainingHeight, marginLimit };
   }, [headerRef, showcaseRef]);
 
-  const throttledScroll = throttle(setScrollStick, 10);
+  let prev = useRef(0);
+  const setScrollStick = useCallback(() => {
+    const { panelRemainingHeight, marginLimit } = getMarginLimit();
 
-  // useEffect(() => {
-  //   window.addEventListener("scroll", throttledScroll);
-  //   return () => window.removeEventListener("scroll", throttledScroll);
-  // }, [throttledScroll]);
+    if (window.scrollY < prev.current) {
+      panelRef.current.style.removeProperty("top");
+      panelRef.current.style.cssText = `bottom: -${panelRemainingHeight}px`;
+    } else {
+      marginRef.current.style.marginTop = `${marginLimit}px`;
+      panelRef.current.style.cssText = `top: -${panelRemainingHeight}px`;
+    }
+    prev.current = window.scrollY;
+  }, [getMarginLimit]);
+
+  const throttledScroll = throttle(setScrollStick, 5);
+
+  useEffect(() => {
+    window.addEventListener("scroll", throttledScroll);
+    return () => window.removeEventListener("scroll", throttledScroll);
+  }, [throttledScroll]);
 
   return (
     <div className="panel-container visible-l">
@@ -90,17 +108,47 @@ export const SidePanel = ({ headerRef, showcaseRef }) => {
               to="/cart"
             />
             <div className="wishlist-btn flex-center">
-              <Link>
-                <FaRegHeart />
-              </Link>
+              <button
+                className="btn btn-wishlist icon"
+                onClick={() => dispatch(removeFromWishlist(productData))}
+              >
+                {wishlist.indexOf(productData.currentShowcase.SKU) >= 0 ? (
+                  <FaHeart />
+                ) : (
+                  <FaRegHeart />
+                )}
+              </button>
             </div>
           </div>
           <div className="selling-points">
             <div className="flex">
-              <GrAlert /> <Link>FREE SHIPPING FOR ALL ORDERS</Link>
+              <GrAlert />{" "}
+              <button
+                className="btn f-regular"
+                onClick={() => {
+                  freeShipRef.current.setIsOpen(true);
+                }}
+              >
+                FREE SHIPPING FOR ALL ORDERS
+              </button>
+              <Callout title={"FREE SHIPPING FOR ALL ORDERS"} ref={freeShipRef}>
+                <div className="vspace-xs f-regular">
+                  For all orders, shipping is offered for free.
+                </div>
+                <div className="vspace-xs f-regular">
+                  Check out our delivery{" "}
+                  <span className="text-underline">
+                    <Link to="/terms-and-conditions/delivery">
+                      Terms and conditions
+                    </Link>
+                  </span>{" "}
+                  for more details.
+                </div>
+              </Callout>
             </div>
             <div className="flex">
-              <BiBox /> <Link>FREE RETURNS</Link>
+              <BiBox />
+              <button className="btn f-regular">FREE RETURNS</button>
             </div>
           </div>
         </div>

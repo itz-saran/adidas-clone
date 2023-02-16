@@ -67,3 +67,8 @@ export const getStars = (rating) => {
   while (stars.length < 5) stars.push(<Star fill={0 * 100} />);
   return stars;
 };
+
+/**
+ * isAuth = useMemo((name, id)=>auth(name, id),[name, id])
+    useCallback((sran, 1)=>auth(saran, 1),[name,id])
+ */
